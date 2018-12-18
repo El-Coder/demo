@@ -1,0 +1,21 @@
+<html>
+<head>
+  <title>F5 Demo</title>
+</head>
+<body>
+  <form action="{{ request.path }}" method="post">
+    <p>First Name <input name="first_name" type="text"></p>
+	  <p>Last Name <input name="last_name" type="text"></p>
+	<input type="submit" value="Submit">
+  </form>
+  <div id="container">
+	  <p>Users List</p>
+	  {% for User in Users %}
+		<div id="users_list">
+      {{ User.first_name }} 
+      {{ User.last_name }}
+    </div> 
+	  {% endfor %}
+  </div>
+</body>
+</html>
